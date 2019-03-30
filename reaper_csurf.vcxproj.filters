@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="lib\fmt\format.cc">
+      <Filter>lib\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fmt\ostream.cc">
+      <Filter>lib\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fmt\posix.cc">
+      <Filter>lib\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fmt\printf.cc">
+      <Filter>lib\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\json\jsoncpp.cpp">
+      <Filter>lib\jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\csurf_main.cpp" />
+    <ClCompile Include="src\csurf_sl.cpp" />
+    <ClCompile Include="src\controls\sl_button.cpp">
+      <Filter>controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controls\sl_drumpad.cpp">
+      <Filter>controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controls\sl_touchpad.cpp">
+      <Filter>controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\routines\sl_cmd.cpp">
+      <Filter>routines</Filter>
+    </ClCompile>
+    <ClCompile Include="src\routines\sl_display.cpp">
+      <Filter>routines</Filter>
+    </ClCompile>
+    <ClCompile Include="src\routines\sl_led.cpp">
+      <Filter>routines</Filter>
+    </ClCompile>
+    <ClCompile Include="src\routines\sl_modeselector.cpp">
+      <Filter>routines</Filter>
+    </ClCompile>
+    <ClCompile Include="src\routines\sl_transport.cpp">
+      <Filter>routines</Filter>
+    </ClCompile>
+    <ClCompile Include="src\reaper\rea_track.cpp">
+      <Filter>reaper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\fmt\container.h">
+      <Filter>lib\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fmt\format.h">
+      <Filter>lib\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fmt\ostream.h">
+      <Filter>lib\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fmt\posix.h">
+      <Filter>lib\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fmt\printf.h">
+      <Filter>lib\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fmt\string.h">
+      <Filter>lib\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fmt\time.h">
+      <Filter>lib\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\json\json\json.h">
+      <Filter>lib\jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\json\json\json-forwards.h">
+      <Filter>lib\jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\csurf.h" />
+    <ClInclude Include="src\csurf_sl.h" />
+    <ClInclude Include="src\reaper_plugin.h" />
+    <ClInclude Include="src\reaper_plugin_functions.h" />
+    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\controls\sl_button.h">
+      <Filter>controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\controls\sl_drumpad.h">
+      <Filter>controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\controls\sl_encoder.h">
+      <Filter>controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\controls\sl_fader.h">
+      <Filter>controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\controls\sl_pot.h">
+      <Filter>controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\controls\sl_speeddial.h">
+      <Filter>controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\controls\sl_touchpad.h">
+      <Filter>controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\routines\sl_cmd.h">
+      <Filter>routines</Filter>
+    </ClInclude>
+    <ClInclude Include="src\routines\sl_convert.h">
+      <Filter>routines</Filter>
+    </ClInclude>
+    <ClInclude Include="src\routines\sl_dependencies.h">
+      <Filter>routines</Filter>
+    </ClInclude>
+    <ClInclude Include="src\routines\sl_display.h">
+      <Filter>routines</Filter>
+    </ClInclude>
+    <ClInclude Include="src\routines\sl_global.h">
+      <Filter>routines</Filter>
+    </ClInclude>
+    <ClInclude Include="src\routines\sl_led.h">
+      <Filter>routines</Filter>
+    </ClInclude>
+    <ClInclude Include="src\routines\sl_modeselector.h">
+      <Filter>routines</Filter>
+    </ClInclude>
+    <ClInclude Include="src\routines\sl_sysex.h">
+      <Filter>routines</Filter>
+    </ClInclude>
+    <ClInclude Include="src\routines\sl_transport.h">
+      <Filter>routines</Filter>
+    </ClInclude>
+    <ClInclude Include="src\reaper\rea_data.h">
+      <Filter>reaper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\reaper\rea_track.h">
+      <Filter>reaper</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Config">
+      <UniqueIdentifier>{911140e0-56f1-49c8-a130-98e5e322ca5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{b5310bd5-4c32-4805-9987-ba167e62bcb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\jsoncpp">
+      <UniqueIdentifier>{eedde765-7807-4ac4-b9f2-1cd57719cd98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\jsoncpp\json">
+      <UniqueIdentifier>{ee2a372c-4f0d-464f-a8db-94266cedd732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\JUCE">
+      <UniqueIdentifier>{b67ed72c-091d-4183-bbc5-0757391fdf64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\fmt">
+      <UniqueIdentifier>{afb90d60-4e42-48e9-9a2e-805de44c9dde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="routines">
+      <UniqueIdentifier>{b74d3f81-737f-44a6-957e-88627a228026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reaper">
+      <UniqueIdentifier>{b7a91960-d13d-4cbb-9d8a-51063cdc33b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="controls">
+      <UniqueIdentifier>{f05303d2-2ac9-413e-ba9f-d1a425129156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extra">
+      <UniqueIdentifier>{48cad999-2e1b-41b5-b516-3be4c31864a4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Source\csurf_sl.cfg">
+      <Filter>Config</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="lib\fmt\CMakeLists.txt">
+      <Filter>lib\fmt</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\res.rc" />
+  </ItemGroup>
+</Project>
