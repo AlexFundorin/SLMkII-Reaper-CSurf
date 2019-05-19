@@ -28,6 +28,9 @@
     <ClInclude Include="lib\fmt\time.h" />
     <ClInclude Include="lib\json\json\json-forwards.h" />
     <ClInclude Include="lib\json\json\json.h" />
+    <ClInclude Include="lib\JuceLibraryCode\AppConfig.h" />
+    <ClInclude Include="lib\JuceLibraryCode\JuceHeader.h" />
+    <ClInclude Include="lib\timer\cxxtimer.hpp" />
     <ClInclude Include="src\controls\sl_button.h" />
     <ClInclude Include="src\controls\sl_drumpad.h" />
     <ClInclude Include="src\controls\sl_encoder.h" />
@@ -37,6 +40,7 @@
     <ClInclude Include="src\controls\sl_touchpad.h" />
     <ClInclude Include="src\csurf.h" />
     <ClInclude Include="src\csurf_sl.h" />
+    <ClInclude Include="src\gui\sl_gui.h" />
     <ClInclude Include="src\reaper\rea_data.h" />
     <ClInclude Include="src\reaper\rea_track.h" />
     <ClInclude Include="src\reaper_plugin.h" />
@@ -58,11 +62,24 @@
     <ClCompile Include="lib\fmt\posix.cc" />
     <ClCompile Include="lib\fmt\printf.cc" />
     <ClCompile Include="lib\json\jsoncpp.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_basics.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_devices.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_formats.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_processors.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_core.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_cryptography.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_data_structures.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_events.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_graphics.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_gui_basics.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_gui_extra.cpp" />
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_opengl.cpp" />
     <ClCompile Include="src\controls\sl_button.cpp" />
     <ClCompile Include="src\controls\sl_drumpad.cpp" />
     <ClCompile Include="src\controls\sl_touchpad.cpp" />
     <ClCompile Include="src\csurf_main.cpp" />
     <ClCompile Include="src\csurf_sl.cpp" />
+    <ClCompile Include="src\gui\sl_gui.cpp" />
     <ClCompile Include="src\reaper\rea_track.cpp" />
     <ClCompile Include="src\routines\sl_cmd.cpp" />
     <ClCompile Include="src\routines\sl_display.cpp" />
@@ -71,10 +88,22 @@
     <ClCompile Include="src\routines\sl_transport.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Source\csurf_sl.cfg" />
+    <None Include="lib\JuceLibraryCode\include_juce_audio_basics.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_audio_devices.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_audio_formats.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_audio_processors.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_core.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_cryptography.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_data_structures.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_events.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_graphics.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_gui_basics.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_gui_extra.mm" />
+    <None Include="lib\JuceLibraryCode\include_juce_opengl.mm" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="lib\fmt\CMakeLists.txt" />
+    <Text Include="lib\JuceLibraryCode\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="src\res.rc" />
@@ -83,31 +112,31 @@
     <SccProjectName />
     <SccLocalPath />
     <ProjectGuid>{2611354E-BF02-41DF-A603-57CD6E54EAF7}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>reaper_csurf_sl</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -135,11 +164,11 @@
     <OutDir>release\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode</IncludePath>
     <OutDir>release\$(Configuration)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
@@ -149,11 +178,11 @@
     <OutDir>debug\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode</IncludePath>
     <OutDir>debug\$(Configuration)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
@@ -174,6 +203,8 @@
       <PrecompiledHeaderOutputFile>.\x86\Release\reaper_csurf_sl.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\$(Platform)\\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\$(Platform)\\Release\</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -222,7 +253,8 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ShowIncludes>true</ShowIncludes>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -268,6 +300,8 @@
       <ObjectFileName>.\$(Platform)\Debug\</ObjectFileName>
       <ProgramDataBaseFileName>.\$(Platform)\Debug\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -313,7 +347,8 @@
       <ProgramDataBaseFileName>.\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>

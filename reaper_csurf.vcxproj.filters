@@ -45,6 +45,43 @@
     <ClCompile Include="src\reaper\rea_track.cpp">
       <Filter>reaper</Filter>
     </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_basics.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_devices.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_formats.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_processors.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_core.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_cryptography.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_data_structures.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_events.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_graphics.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_gui_basics.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_gui_extra.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\JuceLibraryCode\include_juce_opengl.cpp">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\sl_gui.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\fmt\container.h">
@@ -133,6 +170,18 @@
     <ClInclude Include="src\reaper\rea_track.h">
       <Filter>reaper</Filter>
     </ClInclude>
+    <ClInclude Include="lib\timer\cxxtimer.hpp">
+      <Filter>lib\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\sl_gui.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\JuceLibraryCode\AppConfig.h">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\JuceLibraryCode\JuceHeader.h">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Config">
@@ -146,9 +195,6 @@
     </Filter>
     <Filter Include="lib\jsoncpp\json">
       <UniqueIdentifier>{ee2a372c-4f0d-464f-a8db-94266cedd732}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="lib\JUCE">
-      <UniqueIdentifier>{b67ed72c-091d-4183-bbc5-0757391fdf64}</UniqueIdentifier>
     </Filter>
     <Filter Include="lib\fmt">
       <UniqueIdentifier>{afb90d60-4e42-48e9-9a2e-805de44c9dde}</UniqueIdentifier>
@@ -165,15 +211,60 @@
     <Filter Include="extra">
       <UniqueIdentifier>{48cad999-2e1b-41b5-b516-3be4c31864a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lib\timer">
+      <UniqueIdentifier>{16605cc3-50cb-4802-b2d3-673e0aa30dca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{f0fbe70c-a2ae-4628-b17d-a4b8096f4f2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\JuceLibraryCode">
+      <UniqueIdentifier>{037444d8-1012-4f90-81b4-063c536c5277}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Source\csurf_sl.cfg">
-      <Filter>Config</Filter>
+    <None Include="lib\JuceLibraryCode\include_juce_audio_basics.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_audio_devices.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_audio_formats.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_audio_processors.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_core.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_cryptography.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_data_structures.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_events.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_graphics.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_gui_basics.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_gui_extra.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
+    </None>
+    <None Include="lib\JuceLibraryCode\include_juce_opengl.mm">
+      <Filter>lib\JuceLibraryCode</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="lib\fmt\CMakeLists.txt">
       <Filter>lib\fmt</Filter>
+    </Text>
+    <Text Include="lib\JuceLibraryCode\ReadMe.txt">
+      <Filter>lib\JuceLibraryCode</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>

@@ -41,4 +41,4 @@ Keep in mind that there are lots of "hidden" features, like Tr8 button toggles m
 When a track selected, you can switch between it's plugins with A1-8 by single click. Double click A1-8 will toggle offline state 
 for that fx. Holding A1-8 will show/hide plugin GUI. Double click and hold A1-8 will show this plugin's GUI exclusively, hiding all other GUIs.
 
-Binaries are available in 'release' and 'debug' folders. I'm using Debug x64 version as my daily driver.
+Binaries are available in 'release' tab. I'm using Debug x64 version as my daily driver.

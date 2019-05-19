@@ -127,6 +127,8 @@ void CSurf_SL::slStartup() {
 	if (!fexists(plugmapsPath)) fs::create_directories(plugmapsPath);
 	plugmapsUserPath = format("{}SLPlugmaps\\", userPath); // set plugmaps path
 
+	g_plugin_chain_window = new SLWindow("SL", 900, 300, false, juce::Colour());
+
 	runStart = false;				// Disable constant run of this function
 }
 // Define number of banks in project
@@ -345,10 +347,10 @@ void CSurf_SL::FxParser() {
 				if (!fexists(fxDevPath)) fs::create_directory(fxDevPath);
 
 				// Create main object
-				Value rootNode(objectValue);
+				Json::Value rootNode(objectValue);
 
 				// Create information object
-				Value info(objectValue);
+				Json::Value info(objectValue);
 
 				info["Name"] = fxName;
 				info["NameFull"] = fxNameFull;
@@ -371,11 +373,11 @@ void CSurf_SL::FxParser() {
 				// Dump info section object into main object
 				rootNode["Info"] = info;
 
-				Value pages(objectValue);
+				Json::Value pages(objectValue);
 
 				for (int k = 0; k < (TrackFX_GetNumParams(slGlobal.trackSel, fxNum) / 8) + 1; ++k) {
 
-					Value fxparams(objectValue);
+					Json::Value fxparams(objectValue);
 
 					for (int j = 0; j < 8; ++j) {
 						if (TrackFX_GetNumParams(slGlobal.trackSel, fxNum) > j + (8 * k)) {
@@ -419,7 +421,7 @@ void CSurf_SL::FxParser() {
 								fxparams[to_string(j)]["pStepCoarse"] = format("{:.3}", coarse);
 							}
 
-							Value stepVal(arrayValue);
+							Json::Value stepVal(arrayValue);
 							fxparams[to_string(j)]["pStepVal"] = stepVal;
 
 							double minval;
@@ -522,8 +524,23 @@ void CSurf_SL::LearnViewLed() {
 		midi_out->Send(slGlobal.cc, slAm[1].cc, slAm[1].led, 0);
 	}
 }
-void CSurf_SL::LearnViewCmd() {
 
+
+void CSurf_SL::LearnViewCmd() {
+	//if (slAm[0].on) {
+	//	if (!g_plugin_chain_window->isOnDesktop()) {
+	//		g_plugin_chain_window->addToDesktop(g_plugin_chain_window->getDesktopWindowStyleFlags(), GetMainHwnd());
+	//		g_plugin_chain_window->setSize(600, 300);
+	//		g_plugin_chain_window->setVisible(true);
+	//	}
+	//	else {
+	//		//g_plugin_chain_window->setVisible(false);
+	//		g_plugin_chain_window->removeFromDesktop();
+	//	}
+	//}
+	if (slAm[1].click) {
+
+	}
 }
 
 // ---------- DRUMPADS ------------------------------

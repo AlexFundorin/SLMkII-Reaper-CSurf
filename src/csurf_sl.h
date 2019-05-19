@@ -24,8 +24,9 @@
 // Third-party libraries
 #include <fmt/format.h>
 #include <json/json/json.h>
+//#include <json/json.h>
 #include <timer/cxxtimer.hpp>
-
+//#include <nlohmann/json.hpp>
 
 // External classes/structs/functions
 #include "routines/sl_convert.h"
@@ -43,6 +44,8 @@
 #include "controls/sl_drumpad.h"
 #include "controls/sl_speedDial.h"
 #include "controls/sl_touchpad.h"
+
+#include "gui/sl_gui.cpp"
 
 #include "../src/reaper/rea_track.h"
 #include "../src/reaper/rea_data.h"
@@ -116,6 +119,10 @@ public:
 	SLCmd slCmd;
 	SLModeSelector slModeSelector;
 
+	// Juce GUI framework
+	//DocumentWindow SLWindow;
+	//SLWindow* g_plugin_chain_window;
+
 
 	// Userplugins folder path 
 	string userPath = format("{}\\UserPlugins\\", GetResourcePath()); // set plugmaps path
@@ -125,9 +132,9 @@ public:
 	string fxFilename;
 	string fxDevUserPath;
 	string fxUserFilename;
-	Value cfgFx;
-	Value projPlugs;
-	Value trPlugs;
+	Json::Value cfgFx;
+	Json::Value projPlugs;
+	Json::Value trPlugs;
 
 
 	// Create controls instances (with CC numbers)

@@ -14,12 +14,12 @@ public:
 	int state = -1;
 	int lastState = -1;
 
-	int left;
-	int right;
+	int left = 0;
+	int right = 0;
 	bool move = false;
 
 	int prev = -1;
-	int mode;
+	int mode = 0;
 	int led = 0;
 	bool touchState = false;
 

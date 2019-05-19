@@ -13,8 +13,8 @@ public:
 
 	// Rotate
 	bool move = false;	// if any
-	int left;			// left turn
-	int right;			// right turn
+	int left = 0;			// left turn
+	int right = 0;			// right turn
 
 	// Touch
 	bool touchState = false;	// Touched - 64. Not touched - 0
@@ -129,7 +129,7 @@ private:
 
 	//Rotate varuibles
 	int state = 0;					// CW - 1++, CCW - 65++
-	int lastState;
+	int lastState = 0;
 
 	//Button varuibles
 	cxxtimer::Timer timer;
