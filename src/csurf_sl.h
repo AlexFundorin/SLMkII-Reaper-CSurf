@@ -8,6 +8,8 @@
 #endif
 
 // Standard libraries
+#include <memory>
+#include <functional>
 #include <vector>
 #include <regex>
 #include <algorithm> 
@@ -24,8 +26,9 @@
 // Third-party libraries
 #include <fmt/format.h>
 #include <json/json/json.h>
-//#include <json/json.h>
 #include <timer/cxxtimer.hpp>
+//#include <imgui/imgui.h>
+
 //#include <nlohmann/json.hpp>
 
 // External classes/structs/functions
@@ -52,7 +55,6 @@
 
 
 namespace fs = std::experimental::filesystem;
-
 
 int lcdUpdateTime = 100;	// Variable to set LCD update rate (default: 100 = 10 time per second)
 bool mLed = true;	// Toggle display metronome beats at start - RS7 + C5 (default: false = not blinking at start)
@@ -122,6 +124,7 @@ public:
 	// Juce GUI framework
 	//DocumentWindow SLWindow;
 	//SLWindow* g_plugin_chain_window;
+	//SLWindow SLViewGUI;
 
 
 	// Userplugins folder path 

@@ -3,7 +3,7 @@
 using namespace Json;
 
 // ---------- FX MODE FUNCTIONS ---------------------
-void SLCmd::FxButton(string ctrlType, int fxid, int pid, Value &trPlugs) {
+void SLCmd::FxButton(string ctrlType, int fxid, int pid, Json::Value &trPlugs) {
 	string fxNum = to_string(fxid);
 	string page = slGlobal.trackFxPageSel;
 	string ctrlShift = to_string(SLGlobal::rsCmdMain);
@@ -764,7 +764,7 @@ void SLCmd::MixerPg2(vector<SLButton> &Pg) {
 
 // SL.Encoders ------------------------------------
 void SLCmd::UserE(vector<SLEncoder> &E) {}
-void SLCmd::FxE(vector<SLEncoder> &E, Value &trPlugs) {
+void SLCmd::FxE(vector<SLEncoder> &E, Json::Value &trPlugs) {
 	for (int i = 0; i < 8; i++) {
 		if (E[i].left || E[i].right) {
 			if (slGlobal.rsCmdE == 1) {
@@ -982,7 +982,7 @@ void SLCmd::MixerE(vector<SLEncoder> &E) {
 
 // SL.Pots ----------------------------------------
 void SLCmd::UserP(vector<SLPot> &P) {}
-void SLCmd::FxP(vector<SLPot> &P, Value &trPlugs) {
+void SLCmd::FxP(vector<SLPot> &P, Json::Value &trPlugs) {
 	for (int i = 0; i < 8; i++) {
 		if (P[i].move != -1) {
 			// First assignment
@@ -1058,7 +1058,7 @@ void SLCmd::MixerP(vector<SLPot> &P) {
 
 // SL.Faders --------------------------------------
 void SLCmd::UserF(vector<SLFader> &F) {}
-void SLCmd::FxF(vector<SLFader> &F, Value &trPlugs) {
+void SLCmd::FxF(vector<SLFader> &F, Json::Value &trPlugs) {
 	for (int i = 0; i < 8; i++) {
 		if (F[i].move != -1) {
 			// First assignment
@@ -1235,7 +1235,7 @@ void SLCmd::MixerA(vector<SLButton> &A) {
 
 // SL.Row B --------------------------------------
 void SLCmd::UserB(vector<SLButton> &B) {}
-void SLCmd::FxB(vector<SLButton> &B, Value &trPlugs) {
+void SLCmd::FxB(vector<SLButton> &B, Json::Value &trPlugs) {
 	for (int i = 0; i < 8; i++) {
 
 		string ctrlType = "ctrlB";
@@ -1336,7 +1336,7 @@ void SLCmd::MixerB(vector<SLButton> &B) {
 void SLCmd::UserC(vector<SLButton> &C) {
 	if (!SLGlobal::transportLock) {}
 }
-void SLCmd::FxC(vector<SLButton> &C, Value &trPlugs) {
+void SLCmd::FxC(vector<SLButton> &C, Json::Value &trPlugs) {
 	if (!SLGlobal::transportLock) {
 		for (int i = 0; i < 8; i++) {
 
@@ -1392,7 +1392,7 @@ void SLCmd::MixerC(vector<SLButton> &C) {
 void SLCmd::UserD(vector<SLButton> &D) {
 	if (!SLGlobal::transportLock) {}
 }
-void SLCmd::FxD(vector<SLButton> &D, Value &trPlugs) {
+void SLCmd::FxD(vector<SLButton> &D, Json::Value &trPlugs) {
 	if (!SLGlobal::transportLock) {
 		for (int i = 0; i < 8; i++) {
 

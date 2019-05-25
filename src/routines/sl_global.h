@@ -42,7 +42,8 @@ public:
 	static int rsCmdP;				// Active
 	static int rsCmdF;				// Active
 	static int rsCmdSd;				// Active
-	static reaper_plugin_info_t *reaper_plugin_info_copy;
+
+
 
 };
 

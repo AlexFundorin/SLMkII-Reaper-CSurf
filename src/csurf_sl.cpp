@@ -83,6 +83,8 @@ using namespace Json;
 
 static regex operator""_r(const char* r, size_t ct) { return regex(r, ct); }
 
+
+
 // Startup actions (performed once)
 void CSurf_SL::slStartup() {
 	slSysex.Send(slSysex.online, midi_out);						// Send Automap online to controller
@@ -127,7 +129,7 @@ void CSurf_SL::slStartup() {
 	if (!fexists(plugmapsPath)) fs::create_directories(plugmapsPath);
 	plugmapsUserPath = format("{}SLPlugmaps\\", userPath); // set plugmaps path
 
-	g_plugin_chain_window = new SLWindow("SL", 900, 300, false, juce::Colour());
+	//g_plugin_chain_window = new SLWindow("SL", 900, 300, false, juce::Colour());
 
 	runStart = false;				// Disable constant run of this function
 }
@@ -525,7 +527,6 @@ void CSurf_SL::LearnViewLed() {
 	}
 }
 
-
 void CSurf_SL::LearnViewCmd() {
 	//if (slAm[0].on) {
 	//	if (!g_plugin_chain_window->isOnDesktop()) {
@@ -538,9 +539,12 @@ void CSurf_SL::LearnViewCmd() {
 	//		g_plugin_chain_window->removeFromDesktop();
 	//	}
 	//}
-	if (slAm[1].click) {
+	//if (slAm[1].click) {
+	//	if (SLViewGUI->isOnDesktop()) {
 
-	}
+	//	}
+	//	//SLViewGUI.addToDesktop("SL", );
+	//}
 }
 
 // ---------- DRUMPADS ------------------------------
@@ -734,6 +738,7 @@ void CSurf_SL::ModeSelectorCmd() {
 		slCmd.MixerSD(slSd);
 	}
 }
+
 
 void CSurf_SL::LcdUserMode() {
 	string top_msg;

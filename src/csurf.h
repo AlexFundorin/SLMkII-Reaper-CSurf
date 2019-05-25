@@ -7,6 +7,10 @@
 #include <../lib/WDL/db2val.h>
 #include <../lib/WDL/wdlstring.h>
 #include <stdio.h>
+#include <JuceLibraryCode/JuceHeader.h>
+
+// Juce GUI window states
+enum toggle_state { CannotToggle, ToggleOff, ToggleOn };
 
 
 extern REAPER_PLUGIN_HINSTANCE g_hInst; // used for dialogs
