@@ -390,6 +390,10 @@ extern "C"
 
 		add_action("SL JUCE test : MIDI/OSC action test", "JUCETEST_MIDIOSCTEST", CannotToggle, onActionWithValue);
 
+		reaper_plugin_info->Register("hookcommand2", (void*)on_value_action);
+		reaper_plugin_info->Register("toggleaction", (void*)toggleActionCallback);
+		MySurface* surf = new MySurface;
+
 
 		if (reaper_plugin_info)
 		{
