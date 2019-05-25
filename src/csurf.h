@@ -24,6 +24,9 @@ extern HWND g_hwnd;
 extern double(*BR_GetPrevGridDivision)(double position);
 extern double(*BR_GetNextGridDivision)(double position);
 
+// Added by fundorin (JUCE test functions)
+void testUserInputs();
+
 
 /*
 ** REAPER command message defines

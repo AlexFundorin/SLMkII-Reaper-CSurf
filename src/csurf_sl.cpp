@@ -528,23 +528,12 @@ void CSurf_SL::LearnViewLed() {
 }
 
 void CSurf_SL::LearnViewCmd() {
-	//if (slAm[0].on) {
-	//	if (!g_plugin_chain_window->isOnDesktop()) {
-	//		g_plugin_chain_window->addToDesktop(g_plugin_chain_window->getDesktopWindowStyleFlags(), GetMainHwnd());
-	//		g_plugin_chain_window->setSize(600, 300);
-	//		g_plugin_chain_window->setVisible(true);
-	//	}
-	//	else {
-	//		//g_plugin_chain_window->setVisible(false);
-	//		g_plugin_chain_window->removeFromDesktop();
-	//	}
-	//}
-	//if (slAm[1].click) {
-	//	if (SLViewGUI->isOnDesktop()) {
-
-	//	}
-	//	//SLViewGUI.addToDesktop("SL", );
-	//}
+	if (slAm[0].on) {
+	//	MessageManager::callAsync
+	//		testUserInputs();
+	//	Window::initMessageManager();
+	//	MessageManager::callAsync([this]() { testUserInputs(); });
+	}
 }
 
 // ---------- DRUMPADS ------------------------------
