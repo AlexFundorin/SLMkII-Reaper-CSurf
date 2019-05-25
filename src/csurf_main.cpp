@@ -372,7 +372,7 @@ extern "C"
 #endif
 		g_hInst = hInstance;
 		g_plugin_info = reaper_plugin_info;
-		g_hwnd = reaper_plugin_info->hwnd_main;
+		//g_hwnd = reaper_plugin_info->hwnd_main;
 
 		if (!reaper_plugin_info || reaper_plugin_info->caller_version != REAPER_PLUGIN_VERSION || !reaper_plugin_info->GetFunc)
 			return 0;

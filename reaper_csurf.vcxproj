@@ -26,10 +26,165 @@
     <ClInclude Include="lib\fmt\printf.h" />
     <ClInclude Include="lib\fmt\string.h" />
     <ClInclude Include="lib\fmt\time.h" />
+    <ClInclude Include="lib\imgui\imconfig.h" />
+    <ClInclude Include="lib\imgui\imgui.h" />
+    <ClInclude Include="lib\imgui\imgui_internal.h" />
+    <ClInclude Include="lib\imgui\imstb_rectpack.h" />
+    <ClInclude Include="lib\imgui\imstb_textedit.h" />
+    <ClInclude Include="lib\imgui\imstb_truetype.h" />
     <ClInclude Include="lib\json\json\json-forwards.h" />
     <ClInclude Include="lib\json\json\json.h" />
     <ClInclude Include="lib\JuceLibraryCode\AppConfig.h" />
     <ClInclude Include="lib\JuceLibraryCode\JuceHeader.h" />
+    <ClInclude Include="lib\nana\any.hpp" />
+    <ClInclude Include="lib\nana\audio\detail\audio_device.hpp" />
+    <ClInclude Include="lib\nana\audio\detail\audio_stream.hpp" />
+    <ClInclude Include="lib\nana\audio\detail\buffer_preparation.hpp" />
+    <ClInclude Include="lib\nana\audio\player.hpp" />
+    <ClInclude Include="lib\nana\basic_types.hpp" />
+    <ClInclude Include="lib\nana\c++defines.hpp" />
+    <ClInclude Include="lib\nana\charset.hpp" />
+    <ClInclude Include="lib\nana\concepts.hpp" />
+    <ClInclude Include="lib\nana\config.hpp" />
+    <ClInclude Include="lib\nana\datetime.hpp" />
+    <ClInclude Include="lib\nana\deploy.hpp" />
+    <ClInclude Include="lib\nana\filesystem\filesystem.hpp" />
+    <ClInclude Include="lib\nana\filesystem\filesystem_ext.hpp" />
+    <ClInclude Include="lib\nana\fwd.hpp" />
+    <ClInclude Include="lib\nana\gui.hpp" />
+    <ClInclude Include="lib\nana\gui\animation.hpp" />
+    <ClInclude Include="lib\nana\gui\basis.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\basic_window.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\bedrock.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\color_schemes.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\drawer.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\effects_renderer.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\element_store.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\events_holder.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\events_operation.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\event_code.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\general_events.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\inner_fwd.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\internal_scope_guard.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\native_window_interface.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\widget_content_measurer_interface.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\widget_geometrics.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\widget_notifier_interface.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\window_layout.hpp" />
+    <ClInclude Include="lib\nana\gui\detail\window_manager.hpp" />
+    <ClInclude Include="lib\nana\gui\dragdrop.hpp" />
+    <ClInclude Include="lib\nana\gui\dragger.hpp" />
+    <ClInclude Include="lib\nana\gui\drawing.hpp" />
+    <ClInclude Include="lib\nana\gui\effects.hpp" />
+    <ClInclude Include="lib\nana\gui\element.hpp" />
+    <ClInclude Include="lib\nana\gui\filebox.hpp" />
+    <ClInclude Include="lib\nana\gui\layout_utility.hpp" />
+    <ClInclude Include="lib\nana\gui\msgbox.hpp" />
+    <ClInclude Include="lib\nana\gui\notifier.hpp" />
+    <ClInclude Include="lib\nana\gui\place.hpp" />
+    <ClInclude Include="lib\nana\gui\programming_interface.hpp" />
+    <ClInclude Include="lib\nana\gui\screen.hpp" />
+    <ClInclude Include="lib\nana\gui\state_cursor.hpp" />
+    <ClInclude Include="lib\nana\gui\timer.hpp" />
+    <ClInclude Include="lib\nana\gui\tooltip.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\button.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\categorize.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\checkbox.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\combox.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\date_chooser.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\detail\compset.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\detail\inline_widget.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\detail\inline_widget_manager.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\detail\tree_cont.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\detail\widget_iterator.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\float_listbox.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\form.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\group.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\label.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\listbox.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\menu.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\menubar.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\panel.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\picture.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\progress.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\scroll.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\skeletons\textbase.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\skeletons\textbase_export_interface.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\skeletons\text_editor.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\skeletons\text_editor_part.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\skeletons\text_token_stream.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\slider.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\spinbox.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\tabbar.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\textbox.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\toolbar.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\treebox.hpp" />
+    <ClInclude Include="lib\nana\gui\widgets\widget.hpp" />
+    <ClInclude Include="lib\nana\gui\wvl.hpp" />
+    <ClInclude Include="lib\nana\internationalization.hpp" />
+    <ClInclude Include="lib\nana\key_type.hpp" />
+    <ClInclude Include="lib\nana\optional.hpp" />
+    <ClInclude Include="lib\nana\paint\detail\image_impl_interface.hpp" />
+    <ClInclude Include="lib\nana\paint\detail\image_process_provider.hpp" />
+    <ClInclude Include="lib\nana\paint\detail\native_paint_interface.hpp" />
+    <ClInclude Include="lib\nana\paint\detail\ptdefs.hpp" />
+    <ClInclude Include="lib\nana\paint\graphics.hpp" />
+    <ClInclude Include="lib\nana\paint\image.hpp" />
+    <ClInclude Include="lib\nana\paint\image_process_interface.hpp" />
+    <ClInclude Include="lib\nana\paint\image_process_selector.hpp" />
+    <ClInclude Include="lib\nana\paint\pixel_buffer.hpp" />
+    <ClInclude Include="lib\nana\paint\text_renderer.hpp" />
+    <ClInclude Include="lib\nana\pat\abstract_factory.hpp" />
+    <ClInclude Include="lib\nana\pat\cloneable.hpp" />
+    <ClInclude Include="lib\nana\stdc++.hpp" />
+    <ClInclude Include="lib\nana\std_condition_variable.hpp" />
+    <ClInclude Include="lib\nana\std_mutex.hpp" />
+    <ClInclude Include="lib\nana\std_thread.hpp" />
+    <ClInclude Include="lib\nana\system\dataexch.hpp" />
+    <ClInclude Include="lib\nana\system\platform.hpp" />
+    <ClInclude Include="lib\nana\system\shared_wrapper.hpp" />
+    <ClInclude Include="lib\nana\system\timepiece.hpp" />
+    <ClInclude Include="lib\nana\threads\pool.hpp" />
+    <ClInclude Include="lib\nana\traits.hpp" />
+    <ClInclude Include="lib\nana\unicode_bidi.hpp" />
+    <ClInclude Include="lib\nana\verbose_preprocessor.hpp" />
+    <ClInclude Include="lib\nanogui\button.h" />
+    <ClInclude Include="lib\nanogui\checkbox.h" />
+    <ClInclude Include="lib\nanogui\colorpicker.h" />
+    <ClInclude Include="lib\nanogui\colorwheel.h" />
+    <ClInclude Include="lib\nanogui\combobox.h" />
+    <ClInclude Include="lib\nanogui\common.h" />
+    <ClInclude Include="lib\nanogui\entypo.h" />
+    <ClInclude Include="lib\nanogui\formhelper.h" />
+    <ClInclude Include="lib\nanogui\glcanvas.h" />
+    <ClInclude Include="lib\nanogui\glutil.h" />
+    <ClInclude Include="lib\nanogui\graph.h" />
+    <ClInclude Include="lib\nanogui\imagepanel.h" />
+    <ClInclude Include="lib\nanogui\imageview.h" />
+    <ClInclude Include="lib\nanogui\label.h" />
+    <ClInclude Include="lib\nanogui\layout.h" />
+    <ClInclude Include="lib\nanogui\messagedialog.h" />
+    <ClInclude Include="lib\nanogui\nanogui.h" />
+    <ClInclude Include="lib\nanogui\object.h" />
+    <ClInclude Include="lib\nanogui\opengl.h" />
+    <ClInclude Include="lib\nanogui\popup.h" />
+    <ClInclude Include="lib\nanogui\popupbutton.h" />
+    <ClInclude Include="lib\nanogui\progressbar.h" />
+    <ClInclude Include="lib\nanogui\python.h" />
+    <ClInclude Include="lib\nanogui\screen.h" />
+    <ClInclude Include="lib\nanogui\serializer\core.h" />
+    <ClInclude Include="lib\nanogui\serializer\opengl.h" />
+    <ClInclude Include="lib\nanogui\serializer\sparse.h" />
+    <ClInclude Include="lib\nanogui\slider.h" />
+    <ClInclude Include="lib\nanogui\stackedwidget.h" />
+    <ClInclude Include="lib\nanogui\tabheader.h" />
+    <ClInclude Include="lib\nanogui\tabwidget.h" />
+    <ClInclude Include="lib\nanogui\textbox.h" />
+    <ClInclude Include="lib\nanogui\theme.h" />
+    <ClInclude Include="lib\nanogui\toolbutton.h" />
+    <ClInclude Include="lib\nanogui\vscrollpanel.h" />
+    <ClInclude Include="lib\nanogui\widget.h" />
+    <ClInclude Include="lib\nanogui\window.h" />
     <ClInclude Include="lib\timer\cxxtimer.hpp" />
     <ClInclude Include="src\controls\sl_button.h" />
     <ClInclude Include="src\controls\sl_drumpad.h" />
@@ -61,6 +216,10 @@
     <ClCompile Include="lib\fmt\ostream.cc" />
     <ClCompile Include="lib\fmt\posix.cc" />
     <ClCompile Include="lib\fmt\printf.cc" />
+    <ClCompile Include="lib\imgui\imgui.cpp" />
+    <ClCompile Include="lib\imgui\imgui_demo.cpp" />
+    <ClCompile Include="lib\imgui\imgui_draw.cpp" />
+    <ClCompile Include="lib\imgui\imgui_widgets.cpp" />
     <ClCompile Include="lib\json\jsoncpp.cpp" />
     <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_basics.cpp" />
     <ClCompile Include="lib\JuceLibraryCode\include_juce_audio_devices.cpp" />
@@ -168,11 +327,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\nana</IncludePath>
     <OutDir>release\$(Configuration)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;</LibraryPath>
+    <LibraryPath>D:\Share\cpp\Library\nana\build\bin;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>debug\$(Platform)\$(Configuration)\</OutDir>
@@ -182,11 +341,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\nana</IncludePath>
     <OutDir>debug\$(Configuration)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;</LibraryPath>
+    <LibraryPath>D:\Share\cpp\Library\nana\build\bin;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -276,9 +435,10 @@
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName)_$(Platform).dll</OutputFile>
       <ImportLibrary>.\Release\reaper_csurf_sl.lib</ImportLibrary>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;nana_v142_Debug_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>
       </AdditionalOptions>
+      <AdditionalLibraryDirectories>D:\Share\cpp\Library\nana\build\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>copy "Release\reaper_csurf_sl_x64.dll" "C:\REAPER\UserPlugins\"</Command>
@@ -371,7 +531,8 @@
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName)_$(Platform).dll</OutputFile>
       <ImportLibrary>.\Debug\reaper_csurf_sl.lib</ImportLibrary>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;nana_v142_Debug_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Share\cpp\Library\nana\build\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>copy "debug\Debug\reaper_csurf_sl_x64.dll" "C:\REAPER\UserPlugins\"</Command>

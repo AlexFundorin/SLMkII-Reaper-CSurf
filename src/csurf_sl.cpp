@@ -77,6 +77,12 @@ _WOL_SETVZOOMC_TRACKMOUSECUR SWS / wol : Options - Set "Vertical zoom center" to
 
 #include "csurf_sl.h"
 
+#include <nana/gui.hpp>
+#include <nana/gui/widgets/button.hpp>
+#include <nana/gui/widgets/label.hpp>
+#include <nana/gui/widgets/slider.hpp>
+
+
 using namespace std;
 using namespace fmt;
 using namespace Json;
@@ -527,12 +533,86 @@ void CSurf_SL::LearnViewLed() {
 	}
 }
 
+
+
 void CSurf_SL::LearnViewCmd() {
+
+
+
 	if (slAm[0].on) {
-	//	MessageManager::callAsync
-	//		testUserInputs();
-	//	Window::initMessageManager();
-	//	MessageManager::callAsync([this]() { testUserInputs(); });
+
+
+		//using namespace nana;
+		//form fm;
+		//drawing{ fm }.draw([](paint::graphics& graph)
+		//	{
+		//		std::string hw = "Hello, world!";
+		//		auto hw_size = graph.text_extent_size(hw);
+		//		graph.string(
+		//			point{ static_cast<int>(graph.width() - hw_size.width) / 2,
+		//					static_cast<int>(graph.height() - hw_size.height) / 2 }
+		//		, hw);
+		//	});
+		//fm.show();
+		//exec();
+
+		using namespace nana;
+		nana::form fm;
+		label lb{ fm };
+		lb.caption("Hello, world!");
+		lb.bgcolor(colors::azure);
+		//Define a layout object for the form.
+		place layout(fm);
+		//The div-text
+		layout.div("vert<><<><here weight=80><>><>");
+		layout["here"] << lb;
+		layout.collocate();
+		button btn(fm, rectangle(20, 20, 150, 30));
+		btn.caption("Quit");
+		btn.events().click(API::exit);  // API::exit is a function that is triggered on click
+
+		slider sld1(fm, rectangle(50, 60, 30, 150));
+		sld1.vertical(true);
+		slider sld2(fm, rectangle(100, 60, 30, 150));
+		sld2.vertical(true);
+		slider sld3(fm, rectangle(150, 60, 30, 150));
+		sld3.vertical(true);
+		slider sld4(fm, rectangle(200, 60, 30, 150));
+		sld4.vertical(true);
+		slider sld5(fm, rectangle(250, 60, 30, 150));
+		sld5.vertical(true);
+		slider sld6(fm, rectangle(300, 60, 30, 150));
+		sld6.vertical(true);
+		slider sld7(fm, rectangle(350, 60, 30, 150));
+		sld7.vertical(true);
+		slider sld8(fm, rectangle(400, 60, 30, 150));
+		sld8.vertical(true);
+		
+		fm.show();
+		nana::exec();
+
+		////All names of Nana is in the namespace nana;
+		//using namespace nana;
+		////Define a form object, class form will create a window
+		////when a form instance is created.
+		////The new window default visibility is false.
+		//form fm;
+		////Define a label on the fm(form) with a specified area,
+		////and set the caption.
+		//label lb{ fm, rectangle{ 10, 10, 100, 100 } };
+		//lb.caption("Hello, world!");
+
+		////Expose the form.
+		//fm.show();
+		////Pass the control of the application to Nana's event
+		////service. It blocks the execution for dispatching user
+		////input until the form is closed.
+		//exec();
+
+		//nana::msgbox msg{ "Example" };
+		//msg << "Hello World!";
+		//msg.show();
+
 	}
 }
 
