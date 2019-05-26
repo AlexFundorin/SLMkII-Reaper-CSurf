@@ -120,6 +120,7 @@ public:
 	SLDisplay slDisplay;
 	SLCmd slCmd;
 	SLModeSelector slModeSelector;
+	SLGui slGui;
 
 	// Juce GUI framework
 	//DocumentWindow SLWindow;
