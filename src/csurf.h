@@ -7,7 +7,8 @@
 #include <../lib/WDL/db2val.h>
 #include <../lib/WDL/wdlstring.h>
 #include <stdio.h>
-#include <JuceLibraryCode/JuceHeader.h>
+#include <vector>
+#include <functional>
 
 // Juce GUI window states
 enum toggle_state { CannotToggle, ToggleOff, ToggleOn };

@@ -246,7 +246,7 @@ public:
 
     /// Initialize a uniform parameter with a boolean value
     void setUniform(const std::string &name, bool value, bool warn = true) {
-        glUniform1i(uniform(name, warn), (int)value);
+		(uniform(name, warn), (int)value);
     }
 
     /// Initialize a uniform parameter with an integer value

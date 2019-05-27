@@ -306,9 +306,24 @@
     <ClInclude Include="lib\nana\traits.hpp" />
     <ClInclude Include="lib\nana\unicode_bidi.hpp" />
     <ClInclude Include="lib\nana\verbose_preprocessor.hpp" />
-    <ClInclude Include="lib\nanogui\serializer\core.h" />
-    <ClInclude Include="lib\nanogui\serializer\opengl.h" />
-    <ClInclude Include="lib\nanogui\serializer\sparse.h" />
+    <ClInclude Include="lib\imgui\imconfig.h">
+      <Filter>lib\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui.h">
+      <Filter>lib\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui_internal.h">
+      <Filter>lib\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imstb_rectpack.h">
+      <Filter>lib\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imstb_textedit.h">
+      <Filter>lib\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imstb_truetype.h">
+      <Filter>lib\imgui</Filter>
+    </ClInclude>
     <ClInclude Include="lib\nanogui\button.h" />
     <ClInclude Include="lib\nanogui\checkbox.h" />
     <ClInclude Include="lib\nanogui\colorpicker.h" />
@@ -333,6 +348,9 @@
     <ClInclude Include="lib\nanogui\progressbar.h" />
     <ClInclude Include="lib\nanogui\python.h" />
     <ClInclude Include="lib\nanogui\screen.h" />
+    <ClInclude Include="lib\nanogui\serializer\core.h" />
+    <ClInclude Include="lib\nanogui\serializer\opengl.h" />
+    <ClInclude Include="lib\nanogui\serializer\sparse.h" />
     <ClInclude Include="lib\nanogui\slider.h" />
     <ClInclude Include="lib\nanogui\stackedwidget.h" />
     <ClInclude Include="lib\nanogui\tabheader.h" />
@@ -343,24 +361,6 @@
     <ClInclude Include="lib\nanogui\vscrollpanel.h" />
     <ClInclude Include="lib\nanogui\widget.h" />
     <ClInclude Include="lib\nanogui\window.h" />
-    <ClInclude Include="lib\imgui\imconfig.h">
-      <Filter>lib\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\imgui\imgui.h">
-      <Filter>lib\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\imgui\imgui_internal.h">
-      <Filter>lib\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\imgui\imstb_rectpack.h">
-      <Filter>lib\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\imgui\imstb_textedit.h">
-      <Filter>lib\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\imgui\imstb_truetype.h">
-      <Filter>lib\imgui</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Config">

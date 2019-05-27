@@ -327,11 +327,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\nana</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;</IncludePath>
     <OutDir>release\$(Configuration)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
-    <LibraryPath>D:\Share\cpp\Library\nana\build\bin;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>debug\$(Platform)\$(Configuration)\</OutDir>
@@ -341,11 +341,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\JuceLibraryCode;D:\Share\cpp\SLMkII-Reaper-CSurf\lib\nana</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(REAPER_EXTENSION_SDK);$(ProjectDir)\lib;</IncludePath>
     <OutDir>debug\$(Configuration)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
-    <LibraryPath>D:\Share\cpp\Library\nana\build\bin;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -435,10 +435,10 @@
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName)_$(Platform).dll</OutputFile>
       <ImportLibrary>.\Release\reaper_csurf_sl.lib</ImportLibrary>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;nana_v142_Debug_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>
       </AdditionalOptions>
-      <AdditionalLibraryDirectories>D:\Share\cpp\Library\nana\build\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>copy "Release\reaper_csurf_sl_x64.dll" "C:\REAPER\UserPlugins\"</Command>
@@ -531,8 +531,8 @@
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName)_$(Platform).dll</OutputFile>
       <ImportLibrary>.\Debug\reaper_csurf_sl.lib</ImportLibrary>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;nana_v142_Debug_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\Share\cpp\Library\nana\build\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>copy "debug\Debug\reaper_csurf_sl_x64.dll" "C:\REAPER\UserPlugins\"</Command>
