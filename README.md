@@ -42,3 +42,28 @@ Keep in mind that there are lots of "hidden" features, like Tr8 button toggles m
 In fx mode, when any track is selected, you can switch between it's plugins with A1-8 by single click. Double click A1-8 will toggle offline state for that fx. Holding A1-8 will show/hide plugin GUI. Double click and hold A1-8 will show this plugin's GUI exclusively, hiding all other GUIs.
 
 Binaries are available in 'release' tab. I'm using Debug x64 version as my daily driver.
+
+
+
+UPD 2019: 
+
+Almost forgot: it's possuble to remap FX plugin's parameters by editing JSON files inside 'SLPlugmaps' folder (inside Reaper's 'UserPlugins' folder, where the .dll is placed).
+For convenience, you can copy the whole developer's folder from '!Generated' to the root of 'SLPlugmaps' and make your changes inside that copy. The plugin knows that it should check '/UserPlugins/SLPlugmaps/DevName/plugin.json' path first.
+
+By default, all controls are using 'default' section of the JSON file. To map specific type of controls, navigate inside page corresponding sections (1, 2, 3, ...), copy 'default' section and paste it below itself, so that you'd end up with two 'default' sections inside "Page:{1:...", for example. Put comma between those two sections.
+
+Now, change the name of either section from 'default' to 'ctrlE', 'ctrlP', 'ctrlF', 'ctrlA', 'ctrlB', 'ctrlC' or 'ctrlD'. ctrlE is for encoders, ctrlP for pots and so on.
+You can add sections for all types inside each page or just in some of them.
+Search for the needed parameter and copy it's contents to the corresponding control inside you new section.
+I suggest you to take time and learn the mapping file structure before making any changes.
+
+Then, you can change parameter's details, such as: 
+"is if a toggle button?" - change 'pToggle' to true,
+"How many steps to I want for fader to control?" - change pStepNum to a desired number. You can even set specific step values inside 'pStepVal', like:
+"pStepNum" : 3,
+'"pStepVal" : [0, 0.10, 0.20],'
+The most important parameter is fNum, which is the internal number of the FX parameter inside the plugin. By changing 'fNum' you can quickly map specific controls. Don't forget to the name, too.
+
+Yet, even if you'd mess up, don't worry. Simply delete your mess and copy original mapping file from the '!Generated' folder, again.
+
+It would be nice to be able to map parameters via some GUI interface inside Reaper, but I don't have enough expertise in that area to do this properly. Feel free to chime in if you're willing to help me with adding this feature.
